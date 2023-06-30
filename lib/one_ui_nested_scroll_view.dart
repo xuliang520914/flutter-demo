@@ -5,12 +5,14 @@ class OneUiNestedScrollView extends StatefulWidget {
   final double? expandedHeight;
   final double? toolbarHeight;
   final Widget? expandedWidget;
+  final BoxDecoration? boxDecoration;
 
   const OneUiNestedScrollView(
       {super.key,
       this.expandedHeight,
       this.toolbarHeight,
-      this.expandedWidget});
+      this.expandedWidget,
+      this.boxDecoration});
 
   @override
   State<OneUiNestedScrollView> createState() => _OneUiNestedScrollViewState();
@@ -43,6 +45,11 @@ class _OneUiNestedScrollViewState extends State<OneUiNestedScrollView> {
 
             return Stack(
               children: [
+                // background color, image or gradient
+                Container(
+                  decoration: widget.boxDecoration,
+                ),
+
                 // center big title
                 if (widget.expandedWidget != null)
                   Center(
