@@ -30,11 +30,11 @@ class HomePage extends StatefulWidget {
 class _HomePageState extends State<HomePage> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.blue,
-      ),
-      body: const OneUiNestedScrollView(
+    return const Scaffold(
+      // appBar: AppBar(
+      //   backgroundColor: Colors.blue,
+      // ),
+      body: OneUiNestedScrollView(
         // expandedHeight: 400,
         // toolbarHeight: 200,
         expandedWidget: Text(
@@ -42,7 +42,7 @@ class _HomePageState extends State<HomePage> {
           style: TextStyle(fontSize: 30),
         ),
         boxDecoration: BoxDecoration(
-          // color: Colors.blue,
+          color: Colors.blue,
           gradient: LinearGradient(
             colors: [Colors.blue, Colors.amber],
           ),
