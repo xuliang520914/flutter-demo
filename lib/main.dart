@@ -41,6 +41,12 @@ class _HomePageState extends State<HomePage> {
           'Contacts',
           style: TextStyle(fontSize: 30),
         ),
+        boxDecoration: BoxDecoration(
+          // color: Colors.blue,
+          gradient: LinearGradient(
+            colors: [Colors.blue, Colors.amber],
+          ),
+        ),
       ),
     );
   }
