@@ -34,13 +34,44 @@ class _HomePageState extends State<HomePage> {
       body: OneUiNestedScrollView(
         // expandedHeight: 400,
         // toolbarHeight: 200,
-        expandedWidget: Text(
+        expandedWidget: const Text(
           'Contacts',
           style: TextStyle(fontSize: 30),
+        ),
+        leadingIcon: IconButton(
+          onPressed: () {},
+          icon: const Icon(Icons.menu),
+        ),
+        collapsedWidget: const Text(
+          'Contacts',
+          style: TextStyle(fontSize: 20),
         ),
         boxDecoration: BoxDecoration(
           color: Colors.grey.shade300,
         ),
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(Icons.more_vert),
+          ),
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(Icons.search),
+          ),
+          IconButton(
+            onPressed: () {},
+            icon: const Icon(Icons.add),
+          ),
+        ],
+        sliverList: SliverList(delegate: SliverChildBuilderDelegate(
+          (BuildContext context, int index) {
+            return ListTile(
+              leading: CircleAvatar(backgroundColor: Colors.grey.shade300),
+              title: Text('Contact $index'),
+            );
+          },
+        )),
+        // sliverBackgroundColor: Colors.blue,
       ),
     );
   }
