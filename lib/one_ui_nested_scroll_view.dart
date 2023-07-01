@@ -136,10 +136,10 @@ class _OneUiNestedScrollViewState extends State<OneUiNestedScrollView> {
 
   bool onNotification(ScrollEndNotification notification) {
     final scrollViewState = _nestedScrollViewState.currentState;
-    final outController = scrollViewState!.outerController;
+    final outController = scrollViewState?.outerController;
 
-    if (scrollViewState.innerController.position.pixels == 0 &&
-        !outController.position.atEdge) {
+    if (scrollViewState?.innerController.position.pixels == 0 &&
+        !outController!.position.atEdge) {
       final range = _expandedHeight - _toolbarHeight;
       final snapOffset = (outController.offset / range) > 0.55 ? range : 0.0;
 
