@@ -59,6 +59,14 @@ class _OneUiNestedScrollViewState extends State<OneUiNestedScrollView> {
                       child: widget.expandedWidget!,
                     ),
                   ),
+                Align(
+                  alignment: Alignment.bottomCenter,
+                  child: Row(
+                    children: [
+                      IconButton(onPressed: () {}, icon: const Icon(Icons.menu))
+                    ],
+                  ),
+                ),
               ],
             );
           })),
